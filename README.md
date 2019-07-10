@@ -41,7 +41,23 @@ Use regression for continuous data
 
 
 What is random forest?
+Tree only works great with their data
+Forest more flexible
+1. Boostrapped dataset
+2. Random subset of features
 
+Build a random forest
+1. Randomly select sample, allow to pick same sample more than once
+ 2. Randomly select 2 features for the root node and choose one with lower impurity
+3. Randomly select 2 candidates to build tree (random subset of variables)
+
+Use a random forest
+Choose more votes prediction
+Bootstrapping data + aggregate to make decision = bagging
+Out of bag dataset = not in training, only run on tree build without it
+Out of bag error
+
+Can compare random forest built with only 2 variables and with 3 variables and choose the most accurate one with how many features
 
 What is Gradient Boosting?
 
