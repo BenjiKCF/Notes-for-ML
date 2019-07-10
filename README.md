@@ -1,11 +1,52 @@
-# Notes-for-ML
-
 Notes for ML
+
+What is decision tree?
+Yes no question, 
+Continuous > cutoff question
+MC / rank > category question
+
+Root node > internal nodes > Leaf nodes
+
+decision tree for every feature 
+Measure impurity - Gini
+￼
+￼
+Lowest Gini to split
+￼
+Split again and use lowest Gini
+￼
+If impurity is lower before splitting, make it a leaf node
+￼
+Continuous data
+1. Rank the data
+2. Calculate average between data
+3. Calculate impurity for each average
+￼
+Rank data 
+Calculate Gini for every rank
+
+MC Data
+Calculate Gini even for Combination
+￼
+Automatic feature selection
+If feature never gave reduction in impurity,
+Would not use the feature
+
+Control overfit for tree
+Create a threshold such that impurity reduction has to be large enough
+
+Missing data, fill mode or use similar feature as a guide for categorical data
+￼
+Use regression for continuous data
+
+
 What is random forest?
 
 
 What is Gradient Boosting?
 
+Why xgboost?
+Training fast, C++ backend, Parallel
 
 
 What is AdaBoost?
@@ -13,7 +54,7 @@ What is AdaBoost?
 2. Some stumps have larger weight 
 3. Order of tree （take mistake into account）
 
-Stump for every features
+Decision tree for every features
 First stump = lowest Gini index (impurity)
 Sample weight = error  / total (add up to 1)
 ￼
@@ -23,7 +64,7 @@ Decreasing the weight of correct sample
 Amount of say = 0.5 log [(1-total error)/total error]
 ￼
 ￼
-Amount of say is similar for all sample 
+Amount of say is the same for all sample 
 
 Increasing sample weight for incorrectly classified sample
 ￼
