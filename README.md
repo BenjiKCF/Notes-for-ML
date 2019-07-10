@@ -1,0 +1,57 @@
+# Notes-for-ML
+
+Notes for ML
+What is random forest?
+
+
+What is Gradient Boosting?
+
+
+
+What is AdaBoost?
+1. 1node + 2leaves = Stump (Weak learners)
+2. Some stumps have larger weight 
+3. Order of tree （take mistake into account）
+
+Stump for every features
+First stump = lowest Gini index (impurity)
+Sample weight = error  / total (add up to 1)
+￼
+Increasing the weight of incorrect sample
+Decreasing the weight of correct sample
+
+Amount of say = 0.5 log [(1-total error)/total error]
+￼
+￼
+Amount of say is similar for all sample 
+
+Increasing sample weight for incorrectly classified sample
+￼
+￼
+More than old one
+
+Decreasing sample weight for correctly classified sample
+￼
+￼
+Less than old one
+￼
+Use modified Norm weight to make second stump
+
+In theory,
+Use sample weights to calculate weighted Gini indexes to determine next variable (weighted mini index would put more emphasis on correctly classifying the incorrect sample)
+
+Alternatively create new dataset
+￼
+￼
+Pick random number and add sample to the new collection until the new collection Is the same size
+Give all samples equal weight
+￼
+Add up the amount of say for both stumps
+￼
+
+
+
+Hadoop and Spark
+Hadoop, database, distributed, no need to buy expensive server hardware, index and track data, high processing efficiency. HDFS data storage, 有MapReduce (唔洗用spark), MapReduce分步處理 每次處理後的數據都寫入到磁盤上
+
+Spark, processing data for distributed data, not for storage, faster than MpaReduce, Spark同時處理, 快spark 10x 這些數據對象既可以放在內存，也可以放在磁盤
